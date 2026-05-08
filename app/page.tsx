@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Bot, CheckCircle2, Download, PlayCircle, ShieldCheck, Sparkles, Star, Zap } from "lucide-react";
+import { ArrowRight, Bot, CheckCircle2, Download, LucideIcon, PlayCircle, ShieldCheck, Sparkles, Star, Zap } from "lucide-react";
 import { categories, faqs, products, stats, testimonials } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +7,12 @@ import { Card } from "@/components/ui/card";
 import { Section } from "@/components/section";
 import { Storefront } from "@/components/storefront";
 import { Input } from "@/components/ui/input";
+
+const credibility: { title: string; copy: string; Icon: LucideIcon }[] = [
+  { title: "Instant access", copy: "Secure downloads unlock immediately after purchase.", Icon: Download },
+  { title: "Built for outcomes", copy: "Every resource maps to measurable lifestyle or business progress.", Icon: CheckCircle2 },
+  { title: "Stripe-ready commerce", copy: "Checkout, entitlements, and order flow are structured for production.", Icon: ShieldCheck },
+];
 
 export default function HomePage() {
   return (
@@ -88,7 +94,7 @@ export default function HomePage() {
           {testimonials.map((item) => (
             <Card key={item.name} className="p-6">
               <div className="mb-4 flex gap-1 text-blue-300">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
-              <p className="text-sm leading-6 text-white/[.68]">“{item.quote}”</p>
+              <p className="text-sm leading-6 text-white/[.68]">"{item.quote}"</p>
               <div className="mt-5 text-sm font-medium text-white">{item.name}</div>
               <div className="text-xs text-white/[.38]">{item.role}</div>
             </Card>
@@ -98,12 +104,8 @@ export default function HomePage() {
 
       <Section eyebrow="Credibility" title="Premium resources with serious operational taste.">
         <div className="grid gap-5 lg:grid-cols-3">
-          {[
-            ["Instant access", "Secure downloads unlock immediately after purchase.", Download],
-            ["Built for outcomes", "Every resource maps to measurable lifestyle or business progress.", CheckCircle2],
-            ["Stripe-ready commerce", "Checkout, entitlements, and order flow are structured for production.", ShieldCheck]
-          ].map(([title, copy, Icon]) => (
-            <Card key={String(title)} className="p-6">
+          {credibility.map(({ title, copy, Icon }) => (
+            <Card key={title} className="p-6">
               <Icon className="h-6 w-6 text-blue-300" />
               <h3 className="mt-5 text-lg font-semibold text-white">{title}</h3>
               <p className="mt-2 text-sm leading-6 text-white/[.52]">{copy}</p>
