@@ -1,9 +1,16 @@
-import { Bookmark, Download, Settings, UserRound } from "lucide-react";
+import { Bookmark, Download, Settings, UserRound, LucideIcon } from "lucide-react";
 import { products } from "@/lib/data";
 import { Section } from "@/components/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+const navItems: { label: string; Icon: LucideIcon }[] = [
+  { label: "Purchased", Icon: Download },
+  { label: "Saved items", Icon: Bookmark },
+  { label: "Profile", Icon: UserRound },
+  { label: "Settings", Icon: Settings },
+];
 
 export default function DashboardPage() {
   const purchased = products.slice(0, 4);
@@ -11,13 +18,8 @@ export default function DashboardPage() {
     <Section eyebrow="Dashboard" title="Your Crelolabs library, downloads, and settings.">
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
         <Card className="h-fit p-4">
-          {[
-            ["Purchased", Download],
-            ["Saved items", Bookmark],
-            ["Profile", UserRound],
-            ["Settings", Settings]
-          ].map(([label, Icon]) => (
-            <button key={String(label)} className="flex w-full items-center gap-3 rounded-md px-3 py-3 text-left text-sm text-white/[.62] transition hover:bg-white/[.08] hover:text-white">
+          {navItems.map(({ label, Icon }) => (
+            <button key={label} className="flex w-full items-center gap-3 rounded-md px-3 py-3 text-left text-sm text-white/[.62] transition hover:bg-white/[.08] hover:text-white">
               <Icon className="h-4 w-4" /> {label}
             </button>
           ))}
