@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, Search, ShoppingBag, UserRound, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -20,9 +21,13 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-white/[.08] bg-black/[.55] backdrop-blur-2xl">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-white text-sm font-black text-black transition group-hover:shadow-glow">
-            C
-          </span>
+          <Image
+            src="/logo.jpeg"
+            alt="Crelolabs Logo"
+            width={40}
+            height={40}
+            className="rounded-md transition group-hover:shadow-glow"
+          />
           <span className="text-sm font-semibold tracking-wide text-white">Crelolabs</span>
         </Link>
         <div className="hidden items-center gap-1 md:flex">
