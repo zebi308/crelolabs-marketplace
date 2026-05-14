@@ -18,7 +18,7 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-white/[.08] bg-black/[.55] backdrop-blur-2xl">
+    <header className="sticky top-0 z-40 border-b border-amber-300/15 bg-slate-950/[.78] backdrop-blur-2xl">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-3">
           <Image
@@ -28,11 +28,11 @@ export function Navbar() {
             height={40}
             className="rounded-md transition group-hover:shadow-glow"
           />
-          <span className="text-sm font-semibold tracking-wide text-white">Crelolabs</span>
+          <span className="text-sm font-semibold tracking-wide text-amber-100">Crelolabs</span>
         </Link>
         <div className="hidden items-center gap-1 md:flex">
           {links.map(([label, href]) => (
-            <Link key={href} href={href} className="rounded-md px-3 py-2 text-sm text-white/[.62] transition hover:bg-white/[.08] hover:text-white">
+            <Link key={href} href={href} className="rounded-md px-3 py-2 text-sm text-amber-100/80 transition hover:bg-amber-500/10 hover:text-amber-100">
               {label}
             </Link>
           ))}
@@ -53,7 +53,7 @@ export function Navbar() {
             </Link>
           </Button>
         </div>
-        <button className="rounded-md p-2 text-white md:hidden" onClick={() => setOpen((value) => !value)} aria-label="Menu">
+        <button className="rounded-md p-2 text-amber-100 md:hidden" onClick={() => setOpen((value) => !value)} aria-label="Menu">
           {open ? <X /> : <Menu />}
         </button>
       </nav>

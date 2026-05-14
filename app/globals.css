@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: 222 35% 3%;
-  --foreground: 0 0% 98%;
-  --card: 224 20% 7%;
-  --card-foreground: 0 0% 98%;
-  --primary: 215 100% 64%;
-  --primary-foreground: 0 0% 100%;
-  --muted: 225 16% 12%;
-  --muted-foreground: 220 10% 68%;
-  --accent: 260 100% 66%;
-  --accent-foreground: 0 0% 100%;
-  --border: 0 0% 100% / .1;
-  --input: 0 0% 100% / .1;
-  --ring: 215 100% 65%;
+  --background: 45 12% 6%;
+  --foreground: 45 8% 96%;
+  --card: 45 12% 14%;
+  --card-foreground: 45 8% 96%;
+  --primary: 45 94% 60%;
+  --primary-foreground: 20 20% 12%;
+  --muted: 45 22% 26%;
+  --muted-foreground: 45 16% 78%;
+  --accent: 45 100% 68%;
+  --accent-foreground: 20 20% 12%;
+  --border: 45 16% 70% / .18;
+  --input: 45 14% 72% / .16;
+  --ring: 45 92% 68%;
 }
 
 * {
@@ -28,13 +28,13 @@ html {
 
 body {
   min-height: 100vh;
-  background: #030407;
-  color: white;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 ::selection {
-  background: rgba(93, 159, 255, 0.4);
-  color: white;
+  background: rgba(246, 189, 67, 0.35);
+  color: hsl(20 20% 12%);
 }
 
 .text-balance {

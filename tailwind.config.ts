@@ -37,12 +37,12 @@ const config: Config = {
         sans: ["var(--font-inter)", "Inter", "ui-sans-serif", "system-ui"]
       },
       boxShadow: {
-        glow: "0 0 40px rgba(64, 129, 255, 0.22)",
+        glow: "0 0 40px rgba(246, 189, 67, 0.22)",
         luxe: "0 18px 80px rgba(0, 0, 0, 0.55)"
       },
       backgroundImage: {
         "radial-grid":
-          "radial-gradient(circle at 20% 0%, rgba(68, 120, 255, .22), transparent 28%), radial-gradient(circle at 80% 10%, rgba(155, 88, 255, .18), transparent 30%), linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px)"
+          "radial-gradient(circle at 20% 0%, rgba(246, 189, 67, .18), transparent 28%), radial-gradient(circle at 80% 10%, rgba(205, 155, 65, .14), transparent 30%), linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px)"
       }
     }
   },
