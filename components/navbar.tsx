@@ -57,11 +57,11 @@ export function Navbar() {
           {open ? <X /> : <Menu />}
         </button>
       </nav>
-      <div className={cn("grid border-t border-white/[.08] md:hidden", open ? "grid-rows-[1fr]" : "grid-rows-[0fr]")}>
+      <div className={cn("grid border-t border-amber-300/15 md:hidden", open ? "grid-rows-[1fr]" : "grid-rows-[0fr]")}>
         <div className="overflow-hidden">
           <div className="space-y-1 px-4 py-4">
             {links.map(([label, href]) => (
-              <Link key={href} href={href} className="block rounded-md px-3 py-3 text-sm text-white/70 hover:bg-white/[.08]">
+              <Link key={href} href={href} className="block rounded-md px-3 py-3 text-sm text-amber-100/75 hover:bg-amber-500/10">
                 {label}
               </Link>
             ))}

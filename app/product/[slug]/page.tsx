@@ -32,31 +32,31 @@ export default async function ProductPage({ params }: Props) {
       <Section className="pb-8">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-start">
           <div>
-            <div className={`min-h-[420px] rounded-lg border border-white/10 bg-gradient-to-br ${product.accent} p-6 shadow-luxe`}>
+            <div className={`min-h-[420px] rounded-lg border border-amber-300/15 bg-gradient-to-br ${product.accent} p-6 shadow-luxe`}>
               <div className="flex justify-between">
-                <Badge className="border-white/20 bg-black/20 text-white">{product.badge}</Badge>
-                <span className="inline-flex items-center gap-1 rounded-full bg-black/20 px-3 py-1 text-sm text-white"><Star className="h-4 w-4 fill-blue-200 text-blue-200" /> {product.rating}</span>
+                <Badge className="border-amber-300/20 bg-slate-950/40 text-amber-100">{product.badge}</Badge>
+                <span className="inline-flex items-center gap-1 rounded-full bg-slate-950/40 px-3 py-1 text-sm text-amber-100"><Star className="h-4 w-4 fill-amber-300 text-amber-300" /> {product.rating}</span>
               </div>
               <div className="mt-44 max-w-xl">
-                <p className="text-sm uppercase tracking-[0.25em] text-white/60">{product.category}</p>
-                <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white md:text-6xl">{product.title}</h1>
+                <p className="text-sm uppercase tracking-[0.25em] text-amber-100/70">{product.category}</p>
+                <h1 className="mt-3 text-4xl font-semibold tracking-tight text-amber-100 md:text-6xl">{product.title}</h1>
               </div>
             </div>
           </div>
           <Card className="p-6 lg:sticky lg:top-24">
             <h2 className="text-2xl font-semibold text-white">{product.outcome}</h2>
-            <p className="mt-4 leading-7 text-white/[.58]">{product.description}</p>
+            <p className="mt-4 leading-7 text-amber-100/70">{product.description}</p>
             <div className="mt-6 flex items-end gap-3">
-              <span className="text-4xl font-semibold text-white">{formatCurrency(product.price)}</span>
-              {product.compareAt && <span className="pb-1 text-white/[.36] line-through">{formatCurrency(product.compareAt)}</span>}
+              <span className="text-4xl font-semibold text-amber-100">{formatCurrency(product.price)}</span>
+              {product.compareAt && <span className="pb-1 text-amber-100/45 line-through">{formatCurrency(product.compareAt)}</span>}
             </div>
             <div className="mt-6 grid gap-3">
               <Button size="lg" asChild><Link href="/checkout">Buy now <ArrowRight className="h-4 w-4" /></Link></Button>
               <Button variant="secondary" size="lg"><Download className="h-4 w-4" /> Save preview</Button>
             </div>
-            <div className="mt-6 grid gap-3 text-sm text-white/[.55]">
-              <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-blue-300" /> Secure checkout and instant entitlement</span>
-              <span className="inline-flex items-center gap-2"><Download className="h-4 w-4 text-blue-300" /> Re-download from dashboard any time</span>
+            <div className="mt-6 grid gap-3 text-sm text-amber-100/70">
+              <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-amber-300" /> Secure checkout and instant entitlement</span>
+              <span className="inline-flex items-center gap-2"><Download className="h-4 w-4 text-amber-300" /> Re-download from dashboard any time</span>
             </div>
           </Card>
         </div>
@@ -65,8 +65,8 @@ export default async function ProductPage({ params }: Props) {
       <Section eyebrow="Inside" title="Everything included to move from interest to implementation.">
         <div className="grid gap-4 md:grid-cols-2">
           {product.includes.map((item) => (
-            <Card key={item} className="flex items-center gap-3 p-4 text-white/[.72]">
-              <CheckCircle2 className="h-5 w-5 text-blue-300" /> {item}
+            <Card key={item} className="flex items-center gap-3 p-4 text-amber-100/70">
+              <CheckCircle2 className="h-5 w-5 text-amber-300" /> {item}
             </Card>
           ))}
         </div>
@@ -76,8 +76,8 @@ export default async function ProductPage({ params }: Props) {
         <div className="grid gap-5 md:grid-cols-3">
           {product.benefits.map((benefit) => (
             <Card key={benefit} className="p-6">
-              <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              <p className="mt-3 text-sm leading-6 text-white/50">A polished system that keeps the next action visible and the setup friction low.</p>
+              <h3 className="text-lg font-semibold text-amber-100">{benefit}</h3>
+              <p className="mt-3 text-sm leading-6 text-amber-100/60">A polished system that keeps the next action visible and the setup friction low.</p>
             </Card>
           ))}
         </div>
@@ -86,10 +86,10 @@ export default async function ProductPage({ params }: Props) {
       <Section eyebrow="Screenshots" title="A preview of the product experience.">
         <div className="grid gap-4 md:grid-cols-3">
           {["Command dashboard", "Implementation map", "Resource vault"].map((label, index) => (
-            <div key={label} className={`min-h-64 rounded-lg border border-white/10 bg-gradient-to-br ${product.accent} p-4`}>
-              <div className="rounded-md border border-white/15 bg-black/25 p-4 text-sm text-white/70">{label}</div>
-              <div className="mt-16 h-2 rounded-full bg-white/[.35]" style={{ width: `${80 - index * 14}%` }} />
-              <div className="mt-3 h-2 rounded-full bg-white/20" style={{ width: `${56 + index * 10}%` }} />
+            <div key={label} className={`min-h-64 rounded-lg border border-amber-300/15 bg-gradient-to-br ${product.accent} p-4`}>
+              <div className="rounded-md border border-amber-300/20 bg-slate-950/30 p-4 text-sm text-amber-100/80">{label}</div>
+              <div className="mt-16 h-2 rounded-full bg-amber-300/25" style={{ width: `${80 - index * 14}%` }} />
+              <div className="mt-3 h-2 rounded-full bg-amber-300/20" style={{ width: `${56 + index * 10}%` }} />
             </div>
           ))}
         </div>
@@ -99,8 +99,8 @@ export default async function ProductPage({ params }: Props) {
         <div className="grid gap-5 md:grid-cols-3">
           {["Sharper than any template pack I have bought.", "The setup felt premium and oddly calming.", "Useful on day one, deeper by week two."].map((quote) => (
             <Card key={quote} className="p-5">
-              <div className="mb-3 flex gap-1 text-blue-300">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
-              <p className="text-sm leading-6 text-white/[.62]">“{quote}”</p>
+              <div className="mb-3 flex gap-1 text-amber-300">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
+              <p className="text-sm leading-6 text-amber-100/70">“{quote}”</p>
             </Card>
           ))}
         </div>

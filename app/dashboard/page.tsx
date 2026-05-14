@@ -19,7 +19,7 @@ export default function DashboardPage() {
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
         <Card className="h-fit p-4">
           {navItems.map(({ label, Icon }) => (
-            <button key={label} className="flex w-full items-center gap-3 rounded-md px-3 py-3 text-left text-sm text-white/[.62] transition hover:bg-white/[.08] hover:text-white">
+            <button key={label} className="flex w-full items-center gap-3 rounded-md px-3 py-3 text-left text-sm text-amber-100/70 transition hover:bg-amber-500/10 hover:text-amber-100">
               <Icon className="h-4 w-4" /> {label}
             </button>
           ))}
@@ -29,7 +29,7 @@ export default function DashboardPage() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h2 className="text-xl font-semibold text-white">Welcome back, Alex</h2>
-                <p className="mt-1 text-sm text-white/[.48]">4 products owned, 2 saved items, 1 update waiting.</p>
+                <p className="mt-1 text-sm text-amber-100/70">4 products owned, 2 saved items, 1 update waiting.</p>
               </div>
               <Button>Update profile</Button>
             </div>

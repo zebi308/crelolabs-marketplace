@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       <section className="relative mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8">
         <div>
-          <Badge className="mb-5 border-blue-300/20 bg-blue-400/10 text-blue-100">
+          <Badge className="mb-5 border-amber-300/20 bg-amber-500/10 text-amber-100">
             <Sparkles className="mr-2 h-3.5 w-3.5" /> Digital systems designed for ambitious people
           </Badge>
           <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -38,31 +38,31 @@ export default function HomePage() {
           </div>
           <div className="mt-8 grid max-w-xl grid-cols-3 gap-3">
             {stats.slice(0, 3).map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-white/[.08] bg-white/5 p-3">
-                <div className="text-xl font-semibold text-white">{stat.value}</div>
-                <div className="mt-1 text-xs leading-4 text-white/[.42]">{stat.label}</div>
+              <div key={stat.label} className="rounded-lg border border-amber-300/15 bg-slate-950/40 p-3">
+                <div className="text-xl font-semibold text-amber-100">{stat.value}</div>
+                <div className="mt-1 text-xs leading-4 text-amber-100/60">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
         <Card className="relative overflow-hidden p-4">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-violet-500/10" />
-          <div className="relative rounded-md border border-white/10 bg-black/40 p-4">
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-amber-400/10" />
+          <div className="relative rounded-md border border-amber-300/15 bg-slate-950/50 p-4">
             <div className="mb-4 flex items-center justify-between">
               <span className="text-sm font-medium text-white">Crelolabs Command Shelf</span>
               <Badge>Live catalog</Badge>
             </div>
             <div className="grid gap-3">
               {products.slice(0, 4).map((product, index) => (
-                <Link key={product.slug} href={`/product/${product.slug}`} className="group grid grid-cols-[44px_1fr_auto] items-center gap-3 rounded-md border border-white/[.08] bg-white/[0.045] p-3 transition hover:bg-white/[.09]">
+                <Link key={product.slug} href={`/product/${product.slug}`} className="group grid grid-cols-[44px_1fr_auto] items-center gap-3 rounded-md border border-amber-300/15 bg-slate-950/40 p-3 transition hover:bg-slate-950/60">
                   <div className={`grid h-11 w-11 place-items-center rounded-md bg-gradient-to-br ${product.accent}`}>
-                    {index === 0 ? <Bot className="h-5 w-5 text-white" /> : <Zap className="h-5 w-5 text-white" />}
+                    {index === 0 ? <Bot className="h-5 w-5 text-amber-100" /> : <Zap className="h-5 w-5 text-amber-100" />}
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">{product.title}</div>
-                    <div className="text-xs text-white/[.42]">{product.outcome}</div>
+                    <div className="text-sm font-medium text-amber-100">{product.title}</div>
+                    <div className="text-xs text-amber-100/60">{product.outcome}</div>
                   </div>
-                  <ArrowRight className="h-4 w-4 text-white/[.32] transition group-hover:text-white" />
+                  <ArrowRight className="h-4 w-4 text-amber-100/60 transition group-hover:text-amber-100" />
                 </Link>
               ))}
             </div>
@@ -79,10 +79,10 @@ export default function HomePage() {
           {categories.map((category) => {
             const Icon = category.icon;
             return (
-              <Link key={category.name} href="/store" className="rounded-lg border border-white/10 bg-white/[0.045] p-4 transition hover:-translate-y-1 hover:bg-white/[.08]">
-                <Icon className="h-5 w-5 text-blue-300" />
-                <div className="mt-4 font-medium text-white">{category.name}</div>
-                <div className="mt-1 text-sm text-white/40">{category.count} resources</div>
+              <Link key={category.name} href="/store" className="rounded-lg border border-amber-300/15 bg-slate-950/40 p-4 transition hover:-translate-y-1 hover:bg-slate-950/60">
+                <Icon className="h-5 w-5 text-amber-300" />
+                <div className="mt-4 font-medium text-amber-100">{category.name}</div>
+                <div className="mt-1 text-sm text-amber-100/60">{category.count} resources</div>
               </Link>
             );
           })}
@@ -93,10 +93,10 @@ export default function HomePage() {
         <div className="grid gap-5 md:grid-cols-3">
           {testimonials.map((item) => (
             <Card key={item.name} className="p-6">
-              <div className="mb-4 flex gap-1 text-blue-300">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
-              <p className="text-sm leading-6 text-white/[.68]">"{item.quote}"</p>
-              <div className="mt-5 text-sm font-medium text-white">{item.name}</div>
-              <div className="text-xs text-white/[.38]">{item.role}</div>
+                <div className="mb-4 flex gap-1 text-amber-300">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
+                <p className="text-sm leading-6 text-amber-100/70">"{item.quote}"</p>
+                <div className="mt-5 text-sm font-medium text-amber-100">{item.name}</div>
+                <div className="text-xs text-amber-100/45">{item.role}</div>
             </Card>
           ))}
         </div>
@@ -106,9 +106,9 @@ export default function HomePage() {
         <div className="grid gap-5 lg:grid-cols-3">
           {credibility.map(({ title, copy, Icon }) => (
             <Card key={title} className="p-6">
-              <Icon className="h-6 w-6 text-blue-300" />
-              <h3 className="mt-5 text-lg font-semibold text-white">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-white/[.52]">{copy}</p>
+              <Icon className="h-6 w-6 text-amber-300" />
+              <h3 className="mt-5 text-lg font-semibold text-amber-100">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-amber-100/60">{copy}</p>
             </Card>
           ))}
         </div>
@@ -126,7 +126,7 @@ export default function HomePage() {
       </Section>
 
       <Section className="pb-24">
-        <div className="rounded-lg border border-white/10 bg-gradient-to-br from-white/10 to-white/[0.035] p-6 md:p-10">
+        <div className="rounded-lg border border-amber-300/15 bg-gradient-to-br from-amber-500/10 to-slate-950/10 p-6 md:p-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_420px] lg:items-center">
             <div>
               <Badge className="mb-4">Newsletter</Badge>

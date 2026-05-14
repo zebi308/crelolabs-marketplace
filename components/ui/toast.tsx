@@ -19,9 +19,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
       <ToastPrimitives.Root
         open={open}
         onOpenChange={setOpen}
-        className="fixed bottom-6 right-6 z-[80] flex max-w-sm items-center gap-3 rounded-lg border border-white/10 bg-zinc-950/95 p-4 text-sm text-white shadow-luxe backdrop-blur"
+        className="fixed bottom-6 right-6 z-[80] flex max-w-sm items-center gap-3 rounded-lg border border-amber-300/20 bg-slate-950/95 p-4 text-sm text-amber-100 shadow-luxe backdrop-blur"
       >
-        <CheckCircle2 className="h-5 w-5 text-blue-300" />
+        <CheckCircle2 className="h-5 w-5 text-amber-300" />
         <ToastPrimitives.Title>Saved to your Crelolabs cart</ToastPrimitives.Title>
       </ToastPrimitives.Root>
       <ToastPrimitives.Viewport />

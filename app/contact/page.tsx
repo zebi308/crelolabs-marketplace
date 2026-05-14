@@ -13,20 +13,20 @@ export default function ContactPage() {
             <Input placeholder="Name" />
             <Input placeholder="Email" type="email" />
             <Input placeholder="Topic" />
-            <textarea className="min-h-40 rounded-md border border-white/10 bg-black/30 p-4 text-sm text-white outline-none placeholder:text-white/[.35] focus:border-blue-400/70" placeholder="What can we help with?" />
+            <textarea className="min-h-40 rounded-md border border-amber-300/20 bg-slate-950/50 p-4 text-sm text-amber-100 outline-none placeholder:text-amber-100/45 focus:border-amber-400/70" placeholder="What can we help with?" />
             <Button type="submit"><Send className="h-4 w-4" /> Send message</Button>
           </form>
         </Card>
         <div className="space-y-4">
           <Card className="p-5">
-            <Mail className="h-6 w-6 text-blue-300" />
-            <h2 className="mt-4 font-semibold text-white">Support</h2>
-            <p className="mt-2 text-sm text-white/50">hello@crelolabs.com</p>
+            <Mail className="h-6 w-6 text-amber-300" />
+            <h2 className="mt-4 font-semibold text-amber-100">Support</h2>
+            <p className="mt-2 text-sm text-amber-100/60">hello@crelolabs.com</p>
           </Card>
           <Card className="p-5">
-            <MessageSquare className="h-6 w-6 text-blue-300" />
-            <h2 className="mt-4 font-semibold text-white">Response window</h2>
-            <p className="mt-2 text-sm text-white/50">Most messages receive a thoughtful reply within one business day.</p>
+            <MessageSquare className="h-6 w-6 text-amber-300" />
+            <h2 className="mt-4 font-semibold text-amber-100">Response window</h2>
+            <p className="mt-2 text-sm text-amber-100/60">Most messages receive a thoughtful reply within one business day.</p>
           </Card>
         </div>
       </div>

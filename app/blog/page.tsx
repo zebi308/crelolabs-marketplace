@@ -11,7 +11,7 @@ export default function BlogPage() {
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((post, index) => (
           <Card key={post.slug} className="group overflow-hidden">
-            <div className={`h-48 bg-gradient-to-br ${index % 2 ? "from-blue-500 to-violet-500" : "from-cyan-400 to-blue-700"}`} />
+            <div className={`h-48 bg-gradient-to-br ${index % 2 ? "from-amber-500 to-amber-300" : "from-amber-400 to-amber-200"}`} />
             <div className="p-5">
               <div className="mb-4 flex items-center justify-between">
                 <Badge>{post.category}</Badge>

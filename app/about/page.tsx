@@ -26,9 +26,9 @@ export default function AboutPage() {
         <div className="grid gap-6 lg:grid-cols-3">
           {principles.map(({ title, copy, Icon }) => (
             <Card key={title} className="p-6">
-              <Icon className="h-6 w-6 text-blue-300" />
-              <h2 className="mt-5 text-xl font-semibold text-white">{title}</h2>
-              <p className="mt-3 text-sm leading-6 text-white/[.52]">{copy}</p>
+            <Icon className="h-6 w-6 text-amber-300" />
+            <h2 className="mt-5 text-xl font-semibold text-amber-100">{title}</h2>
+            <p className="mt-3 text-sm leading-6 text-amber-100/60">{copy}</p>
             </Card>
           ))}
         </div>
